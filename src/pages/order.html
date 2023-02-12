@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zamowienie</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <img class="header__logo" src="../assets/img/logo.png" alt="" srcset="" />
+      <nav class="header__nav">
+        <a class="nav__button" href="./index.html">Strona Główna</a>
+        <a class="nav__button" href="./menu.html">Menu i promocje</a>
+        <a class="nav__button" href="./locals.html">Lokale</a>
+        <a class="nav__button" href="./order.html">Zamówienie</a>
+        <a class="nav__work nav__button" href="./work.html">Praca</a>
+      </nav>
+      <div>
+        <a class="header__login" href="./login.html">Logowanie</a>
+        <a class="header__contact" href="./contact.html">Kontakt</a>
+      </div>
+    </header>
+    <main class="main">
+      <form class="main__form" action="" method="post">
+        <label for="name">Imię: <br /></label
+        ><input type="text" name="name" id="name" /><br />
+
+        <label for="subname">Nazwisko: <br /></label
+        ><input type="text" name="subname" id="subname" /><br />
+
+        <label for="locality">Miejscowość: <br /></label
+        ><input type="text" name="locality" id="locality" /><br />
+
+        <label for="street">Ulica: <br /></label
+        ><input type="text" name="street" id="street" /><br />
+
+        <label for="number">Numer domu / mieszkania: <br /></label
+        ><input type="number" name="number" id="number" /><br />
+        <fieldset class="main__form--fieldset">
+        <legend>Zamówienie</legend>
+        <div class="form__imageContainer">
+        <label class="hawaii" ><img src="../assets/img/hawajska.jpg" alt="pizza hawajska">Hawajska<input type="checkbox" name="hawaii" id="hawaii" value="hawaii" /></label>
+
+        <label class="vege"><img src="../assets/img/wege.jpeg" alt="pizza wegetariańska">Wegetariańska<input type="checkbox" name="vege" id="vege" value="vege" /></label>
+        
+        <label class="meat"><img src="../assets/img/mieso.jpg" alt="pizza Wściekłe mięso">Wściekłe mięso<input type="checkbox" name="madMeat" id="meat" value="madMeat" /></label>
+        
+        <label class="highlander"><img src="../assets/img/goral.jpg" alt="pizza Góralska">Góralska<input type="checkbox" name="highlander" id="highlander" value="highlander" /></label>
+        
+        <label class="immortale"><img src="../assets/img/immortale.jpg" alt="pizza immortale">Immortale<input type="checkbox" name="immortale" id="immortale" value="immortale" /></label>
+        
+        <label class="beer"><img src="../assets/img/amper.jpg" alt="piwo">Piwo<input type="checkbox" name="beer" id="beer" value="beer" /><br></label>
+        </div>
+        </fieldset>
+        <label for="telephone">Numer telefonu: <br></label>
+        <input type="tel" name="telephone" id="telephone" maxlength="9" pattern="[0-9]{9}" ><br>
+        <label for="email">Adres e-mail: <br></label>
+        <input type="email" name="email" id="email"><br>
+      
+        <button class="main__form--button" type="submit">wyślij</button>
+      </form>
+      <footer class="footer">
+        <a href="">Polityka prywatności</a>  
+        <a href="">Regulamin serwisu</a>  
+        <a href="">Informacje o alergenach</a>  
+        <a href="">Regulaminy promocji</a>  
+      </footer>
+    </main>
+  </body>
+</html>

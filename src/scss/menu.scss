@@ -1,0 +1,180 @@
+@import "~normalize.css";
+
+@import "_variables";
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header{
+    top: 0;
+    text-align: center;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(255, 208, 120, 0.772);
+    border-radius: 0 40px 40px 0;
+    box-shadow: 5px 0 2px rgba(0, 0, 0, 0.54);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    &__logo{
+        width: 130px;
+        border-radius: 50%;
+        border: 3px rgb(0, 0, 0) solid;
+        
+    }
+    &__login{
+        display: block;
+        margin-bottom: 50px;
+    }
+    &__contact{
+        display: block;
+    }
+    &__login, &__contact{
+        box-sizing: border-box;
+        font-size: 20px;
+        padding: 16px;
+        width: 180px;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(209, 1, 1, 0.774);
+    }
+    &__login:hover, &__contact:hover{
+        transition: 0.15s;
+        background-color: rgb(209, 1, 1);
+    }
+    &__login:focus, &__contact:focus{
+        background-color: rgba(106, 1, 1, 0.774);
+    }
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    &__button{
+        font-size: 20px;
+        display: block;
+        padding: 20px;
+        width: 160px;
+        margin-bottom: 50px;
+        border: none;
+        border-radius: 30px;
+        background-color: rgba(209, 1, 1, 0.728);
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__button:hover{ 
+        transition: 0.15s;
+        background-color: rgb(209, 1, 1);
+
+    }
+    &__button:focus{
+        background-color: rgba(106, 1, 1, 0.774);
+    }
+    &__work{
+        margin-bottom: 0;
+    }
+}
+
+
+.main{
+    margin-left: calc(300px + 5%);
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    &__item{
+        font-size: 40px;
+        margin-bottom: 100px; 
+        position: relative;
+        &--price{
+            display: inline-block;
+            padding: 20px;
+            width: 75px;
+            background-color: red;
+            border-radius: 16px;
+            color: #fff;
+    }
+}}
+
+.main__item1:after{
+    position: absolute;
+    bottom: -20px;
+    left: 150px;
+    font-size: 30px;
+    color: rgb(222, 136, 16);
+    content: "Ananas, podwójny!";
+}
+.main__item2:after{
+    position: absolute;
+    bottom: -20px;
+    left: 150px;
+    font-size: 30px;
+    color: rgb(222, 136, 16);
+    content: "Taka bez mięsa.";
+}
+.main__item3:after{
+    position: absolute;
+    bottom: -30px;
+    left: 150px;
+    font-size: 30px;
+    color: rgb(222, 136, 16);
+    content: "Kurczak, boczek, szynka, salami, jalapeno";
+    @media (max-width: 966px ){
+        bottom: -80px;
+    }
+}
+.main__item4:after{
+    position: absolute;
+    bottom: -20px;
+    left: 150px;
+    font-size: 30px;
+    color: rgb(222, 136, 16);
+    content: "Ino łoscypek";
+}
+.main__item5:after{
+    position: absolute;
+    bottom: -20px;
+    left: 150px;
+    font-size: 30px;
+    color: rgb(222, 136, 16);
+    content: "Pepperoni, granaty, drut kolczasty";
+    @media (max-width: 966px ){
+        bottom: -50px;
+    }
+}
+.main__item6:after{
+    position: absolute;
+    bottom: -20px;
+    left: 150px;
+    font-size: 30px;
+    color: rgb(222, 136, 16);
+    content: "Ciepłe i wygazowane piwo";
+    @media (max-width: 966px ){
+        bottom: -50px;
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    grid-area: footer;
+    border-top: black 1px solid;
+    padding: 30px 20px 0 20px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+}
+.footer > a{
+    text-decoration: none;
+    color: black;
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 5px;
+}

@@ -1,0 +1,184 @@
+@import "~normalize.css";
+
+@import "_variables";
+
+html{
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.header{
+    top: 0;
+    text-align: center;
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    background-color: rgba(255, 208, 120, 0.772);
+    border-radius: 0 40px 40px 0;
+    box-shadow: 5px 0 2px rgba(0, 0, 0, 0.54);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    &__logo{
+        width: 130px;
+        border-radius: 50%;
+        border: 3px rgb(0, 0, 0) solid;
+        
+    }
+    &__login{
+        display: block;
+        margin-bottom: 50px;
+    }
+    &__contact{
+        display: block;
+    }
+    &__login, &__contact{
+        box-sizing: border-box;
+        font-size: 20px;
+        padding: 16px;
+        width: 180px;
+        border-radius: 30px;
+        text-decoration: none;
+        color: #fff;
+        background-color: rgba(209, 1, 1, 0.774);
+    }
+    &__login:hover, &__contact:hover{
+        transition: 0.15s;
+        background-color: rgb(209, 1, 1);
+    }
+    &__login:focus, &__contact:focus{
+        background-color: rgba(106, 1, 1, 0.774);
+    }
+}
+
+.nav{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   
+    &__button{
+        font-size: 20px;
+        display: block;
+        padding: 20px;
+        width: 160px;
+        margin-bottom: 50px;
+        border: none;
+        border-radius: 30px;
+        background-color: rgba(209, 1, 1, 0.728);
+        color: #fff;
+        cursor: pointer;
+        text-decoration: none;
+    }
+    &__button:hover{ 
+        transition: 0.15s;
+        background-color: rgb(209, 1, 1);
+
+    }
+    &__button:focus{
+        background-color: rgba(106, 1, 1, 0.774);
+    }
+    &__work{
+        margin-bottom: 0;
+    }
+}
+
+.main{
+    margin-left: calc(250px + 5%);
+    margin-top: 30%;
+    height: 100%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__window{
+        width: 35%;
+        padding: 30px;
+        animation: border1 3s infinite;
+        border-radius: 10px;
+        &--input{
+            display: block;
+            height: 50px;
+            width: 100%;
+            margin-bottom: 30px;
+            border-radius: 16px;
+            border: 1px solid black;
+            margin-top: 10px;
+            padding: 5px;
+            box-sizing: border-box;
+            border: 1px solid red;
+            box-shadow: $borderShadow;
+        }
+        &--input:focus{
+            outline: none;
+            animation: selecting 1.5s infinite;
+        }
+        &--submit, &--register{
+            border: none;
+            background-color: rgba(209, 1, 1, 0.825);
+            color: #fff;
+            padding: 10px;
+            border-radius: 8px;
+        }
+        &--submit:hover, &--register:hover{
+            background-color: rgba(143, 2, 2, 0.825);
+            transition: 0.2s;
+        }
+    }
+}
+
+.test{
+    text-align: end;
+}
+
+@keyframes border1 {
+    0%{
+        box-shadow: 0 2px rgb(255, 0, 0);
+    }
+    25%{
+        box-shadow: -2px 0 rgb(255, 0, 0);
+    }
+    50%{
+        box-shadow: 0 -2px rgb(255, 0, 0);
+    }
+    75%{
+        box-shadow: 2px 0 rgb(255, 0, 0);
+    }
+    100%{
+        box-shadow: 0 2px rgb(255, 0, 0);
+    }
+    
+    
+}
+
+
+
+@keyframes selecting {
+    0%{
+    box-shadow: 3px 3px 10px rgb(255, 0, 0);
+    }
+    50%{
+        box-shadow: none;
+    }
+    100%{
+        box-shadow: 3px 3px 10px rgb(255, 0, 0);
+    }
+}
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: black 1px solid;
+    padding: 30px 20px 0 20px;
+    margin-bottom: 40px;
+    margin-top: 100px;
+    position: absolute;
+    bottom: 40px;
+}
+.footer > a{
+    text-decoration: none;
+    color: black;
+    border: 1px black solid;
+    padding: 5px;
+    border-radius: 5px;
+    margin-right: 35px;
+}
