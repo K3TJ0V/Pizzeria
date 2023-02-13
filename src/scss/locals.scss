@@ -113,6 +113,8 @@ html{
 .footer{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    width: 80%;
     border-top: black 1px solid;
     padding: 30px 20px 0 20px;
     margin-bottom: 40px;
