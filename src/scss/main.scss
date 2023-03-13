@@ -133,6 +133,9 @@ html{
         font-weight: bold;
         font-size: 60px;
         text-shadow: red 3px 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     &__content{
         grid-area: example;
@@ -166,13 +169,18 @@ html{
     display: flex;
     &--previous{
         position: absolute;
-        top: 50%;
+        top: calc(50% - 25px);
         left: 0%;
     }
     &--next{
         position: absolute;
-        top: 50%;
+        top: calc(50% - 25px);
         right: 0%;
+    }
+    &--next, &--previous{
+        border: none;
+        background: none;
+        cursor: pointer;
     }
     &--img{
         width: 100%;
